@@ -1,0 +1,60 @@
+from tkinter import *    #import module tkinter asterick means everything
+root=Tk()                 #to create winodw
+root.geometry("700x500")   #size
+
+def calculate():
+    pizza=e1.get()
+    burgur=e2.get()
+    grill_sandwich=e3.get()
+    yumm_pasta=e4.get()
+    total=((int(pizza)*150)+(int(burgur)*70)+(int(grill_sandwich)*70)+(int(yumm_pasta)*100))
+    print(total)
+    label12=Label(root,text=total,font="times 28 bold ")  
+    label12.place(x=550,y=350)
+
+#label is a function and under this these all are parameter
+label6=Label(root,text="FAVOURITE RESRONAUT",font="times 28 bold")  
+label6.place(x=100,y=10)
+
+label1=Label(root,text="MENU",font="times 28 bold")  
+label1.place(x=450,y=120)
+
+label11=Label(root,text="Select Items",font="times 20 bold")  
+label11.place(x=100,y=100)
+
+label2=Label(root,text="PIZZA                       Rs 150",font="times 15")  
+label2.place(x=450,y=160)
+
+label3=Label(root,text="BURGUR                  Rs 70",font="times 15")  
+label3.place(x=450,y=190)
+
+label4=Label(root,text="GRILLSANDWICH  Rs 70",font="times 15")  
+label4.place(x=450,y=210)
+
+label5=Label(root,text="YUMMY PASTA     Rs 100",font="times 15")  
+label5.place(x=450,y=240)
+
+label7=Label(root,text="PIZZA",font="times 13")  
+label7.place(x=20,y=150)    #to print
+e1=Entry(root)
+e1.place(x=20,y=180)
+
+label8=Label(root,text="BURGUR",font="times 13")  
+label8.place(x=20,y=220)
+e2=Entry(root)
+e2.place(x=20,y=250)
+
+label9=Label(root,text="GRILLSANDWICH",font="times 13")  
+label9.place(x=200,y=150)
+e3=Entry(root)
+e3.place(x=200,y=180)
+
+label10=Label(root,text="YUMMY PASTA",font="times 13")  
+label10.place(x=200,y=230)
+e4=Entry(root)
+e4.place(x=200,y=250)
+
+b1=Button(root,text="bill",width=20,command=calculate)
+b1.place(x=100,y=400)
+
+root.mainloop()    #to diaplay window until we do not press close
